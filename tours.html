@@ -1,0 +1,168 @@
+﻿<!doctype html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Tours guiados — PokéChu</title>
+  <meta name="description" content="Tours guiados y reservas en PokéChu.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="assets/images/favicon.png">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark" aria-label="Navegación principal">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="assets/images/logo.png" alt="Logo PokéChu" height="32" class="me-2">
+        <span class="logo-text">PokéChu</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Mostrar menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="regionsMenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">Regiones</a>
+            <ul class="dropdown-menu" aria-labelledby="regionsMenu">
+              <li><a class="dropdown-item" href="kanto.html">Kanto</a></li>
+              <li><a class="dropdown-item" href="johto.html">Johto</a></li>
+              <li><a class="dropdown-item" href="hoenn.html">Hoenn</a></li>
+              <li><a class="dropdown-item" href="sinnoh.html">Sinnoh</a></li>
+              <li><a class="dropdown-item" href="teselia.html">Teselia</a></li>
+              <li><a class="dropdown-item" href="kalos.html">Kalos</a></li>
+              <li><a class="dropdown-item" href="alola.html">Alola</a></li>
+              <li><a class="dropdown-item" href="galar.html">Galar</a></li>
+              <li><a class="dropdown-item" href="paldea.html">Paldea</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="pokedex.html">PokéDex</a></li>
+          <li class="nav-item"><a class="nav-link" href="characters.html">Personajes</a></li>
+          <li class="nav-item"><a class="nav-link" href="locacion.html">Locaciones</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="tours.html">Tours</a></li>
+          <li class="nav-item"><a class="nav-link" href="noticias.html">Noticias</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container my-5">
+    <div>
+      <img src="assets/images/logo.png" alt="Logo PokéChu" height="48" class="page-header-logo d-block mx-auto mb-2">
+      <h1 class="mb-1">Tours guiados</h1>
+      <p class="lead mb-0">Descubre los tours disponibles y reserve tu experiencia.</p>
+      <a class="btn btn-custom my-3" href="mailto:correo@tuuni.edu?subject=Contacto%20PokéChu" aria-label="Contactar por correo">Contáctanos</a>
+    </div>
+
+    <div class="mb-3">
+      <label for="tourSearch" class="visually-hidden">Buscar tour</label>
+      <div class="input-group">
+        <span class="input-group-text bg-primary text-white border-primary"><i class="bi bi-search" aria-hidden="true"></i></span>
+        <input id="tourSearch" type="text" class="form-control" placeholder="Buscar por nombre, región o resumen...">
+      </div>
+    </div>
+
+    <div class="mb-3 d-flex gap-2 flex-wrap align-items-center">
+      <div class="btn-group" role="group" aria-label="Filtros por región">
+        <button class="btn btn-outline-secondary btn-sm" data-region="">Todos</button>
+        <button class="btn btn-outline-secondary btn-sm" data-region="Nueva York">Nueva York</button>
+        <button class="btn btn-outline-secondary btn-sm" data-region="París">París</button>
+        <button class="btn btn-outline-secondary btn-sm" data-region="Barcelona">Barcelona</button>
+      </div>
+      <div class="ms-auto d-flex gap-2">
+        <div class="btn-group" role="group" aria-label="Filtros por duración">
+          <button class="btn btn-outline-secondary btn-sm" data-duration="">Duración</button>
+          <button class="btn btn-outline-secondary btn-sm" data-duration="short">Corta</button>
+          <button class="btn btn-outline-secondary btn-sm" data-duration="half">Media</button>
+          <button class="btn btn-outline-secondary btn-sm" data-duration="full">Completa</button>
+        </div>
+        <button id="clearTourFilters" class="btn btn-sm btn-outline-primary">Limpiar</button>
+      </div>
+    </div>
+
+    <section aria-labelledby="toursListTitle" class="mb-4">
+      <h2 id="toursListTitle" class="visually-hidden">Listado de tours</h2>
+      <div id="toursList" class="row g-4" aria-live="polite" aria-busy="false"></div>
+    </section>
+
+    <section id="tour-detail" class="region-page" aria-labelledby="tourTitle" role="region" data-tour="">
+      <div class="region-hero p-3 rounded shadow-sm mb-4 d-flex flex-column flex-lg-row gap-3 align-items-start">
+        <div class="hero-text flex-fill">
+          <h2 id="tourTitle" class="mb-1">Tour</h2>
+          <p id="tourRegion" class="text-muted mb-1">Región</p>
+          <p id="tourDuration" class="text-muted mb-1">Duración</p>
+          <p id="tourLevel" class="text-muted mb-1">Nivel</p>
+          <p id="tourCapacity" class="text-muted mb-1">Capacidad</p>
+          <p id="tourPrice" class="text-muted mb-1">Precio</p>
+          <p id="tourSummary" class="mb-2">Resumen del tour.</p>
+          <p id="tourNotes" class="mb-1 text-muted">Notas.</p>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-lg-7">
+          <div class="p-3 rounded shadow-sm mb-3" style="background:var(--card-bg); color:var(--card-text);">
+            <h3 class="h6">Itinerario</h3>
+            <ul id="tourItinerary" class="list-unstyled mb-0"></ul>
+          </div>
+          <div class="p-3 rounded shadow-sm mb-3" style="background:var(--card-bg); color:var(--card-text);">
+            <h3 class="h6">Incluye</h3>
+            <div id="tourIncludes" class="d-flex flex-wrap gap-2"></div>
+          </div>
+          <div class="p-3 rounded shadow-sm mb-3" style="background:var(--card-bg); color:var(--card-text);">
+            <h3 class="h6">Horarios</h3>
+            <div id="tourSchedule" class="d-flex flex-wrap gap-2"></div>
+          </div>
+        </div>
+        <aside class="col-lg-5">
+          <div class="map-card mb-3 p-3 rounded shadow-sm">
+            <h3 class="h6">Mapa</h3>
+            <img id="tourMapImg" src="assets/images/regions/placeholder.png" alt="Mapa del tour" class="img-fluid rounded mb-2" loading="lazy">
+          </div>
+          <div class="p-3 rounded shadow-sm mb-3" style="background:var(--card-bg); color:var(--card-text);">
+            <h3 class="h6">Galería</h3>
+            <div id="tourGallery"></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <button id="themeToggleBtnFloating" class="theme-toggle-floating" aria-label="Cambiar tema">
+    <img id="themeIcon" src="assets/images/pokemon/488.png" alt="Modo Claro">
+  </button>
+  <section id="redes-sociales" class="mt-5 text-center" aria-labelledby="redesTitle">
+    <h2 id="redesTitle" class="mb-3">Síguenos en redes sociales</h2>
+    <p class="text-muted mb-3">No te pierdas ninguna novedad del mundo Pokémon.</p>
+    <div class="d-flex justify-content-center flex-wrap gap-3">
+      <a class="btn btn-outline-primary" href="https://facebook.com/pokechu" target="_blank" rel="noopener" aria-label="Facebook"><i class="bi bi-facebook" aria-hidden="true"></i> Facebook</a>
+      <a class="btn btn-outline-primary" href="https://instagram.com/pokechu" target="_blank" rel="noopener" aria-label="Instagram"><i class="bi bi-instagram" aria-hidden="true"></i> Instagram</a>
+      <a class="btn btn-outline-primary" href="https://youtube.com/@pokechu" target="_blank" rel="noopener" aria-label="YouTube"><i class="bi bi-youtube" aria-hidden="true"></i> YouTube</a>
+      <a class="btn btn-outline-primary" href="https://x.com/pokechu" target="_blank" rel="noopener" aria-label="X (Twitter)"><i class="bi bi-twitter-x" aria-hidden="true"></i> X</a>
+      <a class="btn btn-outline-primary" href="https://discord.gg/pokechu" target="_blank" rel="noopener" aria-label="Discord"><i class="bi bi-discord" aria-hidden="true"></i> Discord</a>
+      <a class="btn btn-outline-primary" href="https://tiktok.com/@pokechu" target="_blank" rel="noopener" aria-label="TikTok"><i class="bi bi-tiktok" aria-hidden="true"></i> TikTok</a>
+    </div>
+  </section>
+  <footer class="mt-5 py-4 text-center">
+    <div class="container">
+      <p>© 2023 PokéChu — Proyecto académico</p>
+      <p><a href="privacy.html">Política de Privacidad</a></p>
+      <p class="mb-1"><strong>Enlaces de interés:</strong></p>
+      <p class="mb-0">
+        <a href="https://www.youtube.com/@pokemon" target="_blank" rel="noopener">Canal oficial de Pokémon (YouTube)</a> ·
+        <a href="https://www.google.com/maps?q=The+Pokémon+Company+Kyoto+Japan" target="_blank" rel="noopener">Dónde se encuentra la compañiéa de Pokémon (Mapa)</a>
+      </p>
+
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/tours.js"></script>
+</body>
+</html>

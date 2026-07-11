@@ -1,0 +1,334 @@
+﻿<!doctype html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>PokéChu — Mundo Pokémon</title>
+  <meta name="description" content="PokéChu: Regiones, PokéDex, locaciones y tours del mundo Pokémon. Proyecto académico.">
+  <meta name="author" content="Tu Nombre">
+  <meta property="og:title" content="PokéChu — Mundo Pokémon">
+  <meta property="og:description" content="Regiones, PokéDex, locaciones y tours del mundo Pokémon.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="assets/images/favicon.png">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark" aria-label="Navegación principal">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#" onclick="navigate('inicio')">
+        <img src="assets/images/logo.png" alt="Logo PokéChu" height="36" class="me-2">
+        <span class="logo-text">PokéChu</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+              aria-controls="navMenu" aria-expanded="false" aria-label="Mostrar menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="#" onclick="navigate('inicio')">Inicio</a></li>
+          <li class="nav-item dropdown" id="regionsDropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="regionsMenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Regiones
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="regionsMenu">
+              <li><a class="dropdown-item" href="kanto.html" onclick="showRegion('kanto'); navigate('regiones')">Kanto</a></li>
+              <li><a class="dropdown-item" href="johto.html" onclick="showRegion('johto'); navigate('regiones')">Johto</a></li>
+              <li><a class="dropdown-item" href="hoenn.html" onclick="showRegion('hoenn'); navigate('regiones')">Hoenn</a></li>
+              <li><a class="dropdown-item" href="sinnoh.html" onclick="showRegion('sinnoh'); navigate('regiones')">Sinnoh</a></li>
+              <li><a class="dropdown-item" href="teselia.html" onclick="showRegion('teselia'); navigate('regiones')">Teselia</a></li>
+              <li><a class="dropdown-item" href="kalos.html" onclick="showRegion('kalos'); navigate('regiones')">Kalos</a></li>
+              <li><a class="dropdown-item" href="alola.html" onclick="showRegion('alola'); navigate('regiones')">Alola</a></li>
+              <li><a class="dropdown-item" href="galar.html" onclick="showRegion('galar'); navigate('regiones')">Galar</a></li>
+              <li><a class="dropdown-item" href="paldea.html" onclick="showRegion('paldea'); navigate('regiones')">Paldea</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="pokedex.html" onclick="navigate('pokedex')">PokéDex</a></li>
+          <li class="nav-item"><a class="nav-link" href="characters.html" onclick="navigate('characters')">Personajes</a></li>
+          <li class="nav-item"><a class="nav-link" href="locacion.html" onclick="navigate('locaciones')">Locaciones</a></li>
+          <li class="nav-item"><a class="nav-link" href="tours.html" onclick="navigate('tours')">Tours</a></li>
+          <li class="nav-item"><a class="nav-link" href="noticias.html">Noticias</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container my-5">
+    <section id="inicio" class="page-section active-section" aria-labelledby="inicioTitle">
+      <div class="text-center mb-4">
+        <img src="assets/images/logo.png" alt="Logo PokéChu" class="page-header-logo d-block mx-auto mb-2">
+        <h1 id="inicioTitle">Bienvenido a PokéChu</h1>
+        <p class="lead">Explora regiones, consulta la PokéDex, descubre locaciones y reserva tours temáticos.</p>
+      </div>
+
+      <div id="pokemonCarousel" class="carousel slide mb-5 shadow" data-bs-ride="carousel" aria-label="Carrusel de Pokémon destacados">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="assets/images/pokemon/025.png" class="d-block w-100 carousel-img" alt="Pikachu - Kanto" loading="lazy">
+            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
+              <h5>Kanto — Pikachu</h5>
+              <p>El compañero icónico de muchas aventuras.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="assets/images/pokemon/448.png" class="d-block w-100 carousel-img" alt="Lucario - Sinnoh" loading="lazy">
+            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
+              <h5>Sinnoh — Lucario</h5>
+              <p>Un guerrero del aura con gran carisma.</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#pokemonCarousel" data-bs-slide="prev" aria-label="Anterior">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#pokemonCarousel" data-bs-slide="next" aria-label="Siguiente">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </button>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <div class="card p-4 shadow" style="background-color:var(--card-bg);">
+            <h3 class="text-center mb-3">¡Únete a la Aventura!</h3>
+            <form id="ingresoForm" aria-label="Formulario de ingreso">
+              <div class="mb-3">
+                <label for="entrenador" class="form-label">Nombre de Entrenador</label>
+                <input type="text" id="entrenador" class="form-control" placeholder="Ej. Ash Ketchum" required>
+              </div>
+              <div class="mb-3">
+                <label for="emailEntrenador" class="form-label">Correo</label>
+                <input type="email" id="emailEntrenador" class="form-control" placeholder="tu@correo.com" required>
+              </div>
+              <div class="d-grid">
+                <button type="submit" class="btn btn-custom">Aceptar e Ingresar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <section id="tipos-pokemon" class="mt-5" aria-labelledby="tiposTitle">
+        <h2 id="tiposTitle" class="text-center mb-4">Tipos de Pokémon y sus debilidades</h2>
+        <p class="text-center text-muted mb-4">
+          Fuerte contra (2x), Débil contra — recibe 2x, y No es eficaz contra (0.5x o menos).
+        </p>
+        <div class="table-responsive mb-5">
+          <table class="table table-striped table-bordered align-middle text-center">
+            <thead class="table-dark">
+              <tr>
+                <th scope="col">Tipo</th>
+                <th scope="col">Fuerte contra (2x)</th>
+                <th scope="col">Débil contra — recibe 2x</th>
+                <th scope="col">No es eficaz contra (0.5x o menos)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">⚪ Normal</th><td><ul class="list-unstyled mb-0"><li>Ninguno</li></ul></td><td><ul class="list-unstyled mb-0"><li>Lucha</li></ul></td><td><ul class="list-unstyled mb-0"><li>Roca</li><li>Acero</li><li>Fantasma = 0x</li></ul></td></tr>
+              <tr><th scope="row">🔥 Fuego</th><td><ul class="list-unstyled mb-0"><li>Planta</li><li>Hielo</li><li>Bicho</li><li>Acero</li></ul></td><td><ul class="list-unstyled mb-0"><li>Agua</li><li>Tierra</li><li>Roca</li></ul></td><td><ul class="list-unstyled mb-0"><li>Fuego</li><li>Agua</li><li>Roca</li><li>Dragón</li></ul></td></tr>
+              <tr><th scope="row">💧 Agua</th><td><ul class="list-unstyled mb-0"><li>Fuego</li><li>Tierra</li><li>Roca</li></ul></td><td><ul class="list-unstyled mb-0"><li>Eléctrico</li><li>Planta</li></ul></td><td><ul class="list-unstyled mb-0"><li>Agua</li><li>Planta</li><li>Dragón</li></ul></td></tr>
+              <tr><th scope="row">⚡ Eléctrico</th><td><ul class="list-unstyled mb-0"><li>Agua</li><li>Volador</li></ul></td><td><ul class="list-unstyled mb-0"><li>Tierra</li></ul></td><td><ul class="list-unstyled mb-0"><li>Eléctrico</li><li>Planta</li><li>Dragón</li><li>Tierra = 0x</li></ul></td></tr>
+              <tr><th scope="row">🌿 Planta</th><td><ul class="list-unstyled mb-0"><li>Agua</li><li>Tierra</li><li>Roca</li></ul></td><td><ul class="list-unstyled mb-0"><li>Fuego</li><li>Hielo</li><li>Veneno</li><li>Volador</li><li>Bicho</li></ul></td><td><ul class="list-unstyled mb-0"><li>Fuego</li><li>Planta</li><li>Veneno</li><li>Volador</li><li>Bicho</li><li>Dragón</li><li>Acero</li></ul></td></tr>
+              <tr><th scope="row">❄️ Hielo</th><td><ul class="list-unstyled mb-0"><li>Planta</li><li>Tierra</li><li>Volador</li><li>Dragón</li></ul></td><td><ul class="list-unstyled mb-0"><li>Fuego</li><li>Lucha</li><li>Roca</li><li>Acero</li></ul></td><td><ul class="list-unstyled mb-0"><li>Fuego</li><li>Agua</li><li>Hielo</li><li>Acero</li></ul></td></tr>
+              <tr><th scope="row">🥊 Lucha</th><td><ul class="list-unstyled mb-0"><li>Normal</li><li>Hielo</li><li>Roca</li><li>Siniestro</li><li>Acero</li></ul></td><td><ul class="list-unstyled mb-0"><li>Volador</li><li>Psíquico</li><li>Hada</li></ul></td><td><ul class="list-unstyled mb-0"><li>Veneno</li><li>Volador</li><li>Psíquico</li><li>Bicho</li><li>Hada</li><li>Fantasma = 0x</li></ul></td></tr>
+              <tr><th scope="row">🧪 Veneno</th><td><ul class="list-unstyled mb-0"><li>Planta</li><li>Hada</li></ul></td><td><ul class="list-unstyled mb-0"><li>Tierra</li><li>Psíquico</li></ul></td><td><ul class="list-unstyled mb-0"><li>Veneno</li><li>Tierra</li><li>Roca</li><li>Fantasma</li><li>Acero = 0x</li></ul></td></tr>
+              <tr><th scope="row">🟫 Tierra</th><td><ul class="list-unstyled mb-0"><li>Fuego</li><li>Eléctrico</li><li>Veneno</li><li>Roca</li><li>Acero</li></ul></td><td><ul class="list-unstyled mb-0"><li>Agua</li><li>Planta</li><li>Hielo</li></ul></td><td><ul class="list-unstyled mb-0"><li>Planta</li><li>Bicho</li><li>Volador = 0x</li></ul></td></tr>
+              <tr><th scope="row">🦅 Volador</th><td><ul class="list-unstyled mb-0"><li>Planta</li><li>Lucha</li><li>Bicho</li></ul></td><td><ul class="list-unstyled mb-0"><li>Eléctrico</li><li>Hielo</li><li>Roca</li></ul></td><td><ul class="list-unstyled mb-0"><li>Eléctrico</li><li>Roca</li><li>Acero</li></ul></td></tr>
+              <tr><th scope="row">🔮 Psíquico</th><td><ul class="list-unstyled mb-0"><li>Lucha</li><li>Veneno</li></ul></td><td><ul class="list-unstyled mb-0"><li>Bicho</li><li>Fantasma</li><li>Siniestro</li></ul></td><td><ul class="list-unstyled mb-0"><li>Psíquico</li><li>Acero</li><li>Siniestro = 0x</li></ul></td></tr>
+              <tr><th scope="row">🐛 Bicho</th><td><ul class="list-unstyled mb-0"><li>Planta</li><li>Psíquico</li><li>Siniestro</li></ul></td><td><ul class="list-unstyled mb-0"><li>Fuego</li><li>Volador</li><li>Roca</li></ul></td><td><ul class="list-unstyled mb-0"><li>Fuego</li><li>Lucha</li><li>Veneno</li><li>Volador</li><li>Fantasma</li><li>Acero</li><li>Hada</li></ul></td></tr>
+              <tr><th scope="row">🪨 Roca</th><td><ul class="list-unstyled mb-0"><li>Fuego</li><li>Hielo</li><li>Volador</li><li>Bicho</li></ul></td><td><ul class="list-unstyled mb-0"><li>Agua</li><li>Planta</li><li>Lucha</li><li>Tierra</li><li>Acero</li></ul></td><td><ul class="list-unstyled mb-0"><li>Lucha</li><li>Tierra</li><li>Acero</li></ul></td></tr>
+              <tr><th scope="row">👻 Fantasma</th><td><ul class="list-unstyled mb-0"><li>Psíquico</li><li>Fantasma</li></ul></td><td><ul class="list-unstyled mb-0"><li>Fantasma</li><li>Siniestro</li></ul></td><td><ul class="list-unstyled mb-0"><li>Siniestro</li><li>Normal = 0x</li></ul></td></tr>
+              <tr><th scope="row">🐉 Dragón</th><td><ul class="list-unstyled mb-0"><li>Dragón</li></ul></td><td><ul class="list-unstyled mb-0"><li>Hielo</li><li>Dragón</li><li>Hada</li></ul></td><td><ul class="list-unstyled mb-0"><li>Acero</li><li>Hada = 0x</li></ul></td></tr>
+              <tr><th scope="row">🌑 Siniestro</th><td><ul class="list-unstyled mb-0"><li>Psíquico</li><li>Fantasma</li></ul></td><td><ul class="list-unstyled mb-0"><li>Lucha</li><li>Bicho</li><li>Hada</li></ul></td><td><ul class="list-unstyled mb-0"><li>Lucha</li><li>Siniestro</li><li>Hada</li></ul></td></tr>
+              <tr><th scope="row">⚙️ Acero</th><td><ul class="list-unstyled mb-0"><li>Hielo</li><li>Roca</li><li>Hada</li></ul></td><td><ul class="list-unstyled mb-0"><li>Fuego</li><li>Lucha</li><li>Tierra</li></ul></td><td><ul class="list-unstyled mb-0"><li>Fuego</li><li>Agua</li><li>Eléctrico</li><li>Acero</li></ul></td></tr>
+              <tr><th scope="row">🧚 Hada</th><td><ul class="list-unstyled mb-0"><li>Lucha</li><li>Dragón</li><li>Siniestro</li></ul></td><td><ul class="list-unstyled mb-0"><li>Veneno</li><li>Acero</li></ul></td><td><ul class="list-unstyled mb-0"><li>Fuego</li><li>Veneno</li><li>Acero</li></ul></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="card p-4 shadow" style="background-color:var(--card-bg);">
+          <h3 class="mb-3">Inmunidades (no reciben daño)</h3>
+          <p class="text-muted">Estas son muy importantes porque muchos jugadores las olvidan:</p>
+          <ol class="mb-0">
+            <li><strong>Normal</strong> es inmune a <em>Fantasma</em>.</li>
+            <li><strong>Fantasma</strong> es inmune a <em>Normal</em> y <em>Lucha</em>.</li>
+            <li><strong>Tierra</strong> es inmune a <em>Eléctrico</em>.</li>
+            <li><strong>Volador</strong> es inmune a <em>Tierra</em>.</li>
+            <li><strong>Acero</strong> es inmune a <em>Veneno</em>.</li>
+            <li><strong>Hada</strong> es inmune a <em>Dragón</em>.</li>
+            <li><strong>Siniestro</strong> es inmune a <em>Psíquico</em>.</li>
+          </ol>
+        </div>
+      </section>
+    </section>
+
+    <section id="regiones" class="page-section" aria-labelledby="regionesTitle" style="display:none">
+      <h2 id="regionesTitle" class="text-center mb-4">Regiones Pokémon</h2>
+      <ul class="nav nav-pills justify-content-center mb-4" role="tablist">
+        <li class="nav-item"><button class="nav-link active" onclick="showRegion('kanto')" aria-controls="region-kanto">Kanto</button></li>
+        <li class="nav-item"><button class="nav-link" onclick="showRegion('johto')" aria-controls="region-johto">Johto</button></li>
+        <li class="nav-item"><button class="nav-link" onclick="showRegion('hoenn')" aria-controls="region-hoenn">Hoenn</button></li>
+      </ul>
+      <div id="region-container" class="region-card shadow style-kanto" role="region" aria-live="polite">
+        <div id="region-kanto" class="region-content">
+          <div class="row align-items-center">
+            <div class="col-md-6">
+              <h3>Kanto</h3>
+              <p><strong>Topología:</strong> Llanuras, bosques y montañas costeras.</p>
+              <p><strong>Clima:</strong> Templado, estaciones marcadas.</p>
+              <p><strong>Pokémon representativo:</strong> Pikachu, Charizard.</p>
+            </div>
+            <div class="col-md-6 text-center">
+              <img src="assets/images/regions/kanto.jpg" alt="Mapa de Kanto" class="img-fluid rounded shadow" loading="lazy">
+            </div>
+          </div>
+        </div>
+        <div id="region-johto" class="region-content" style="display:none">
+          <div class="row align-items-center">
+            <div class="col-md-6">
+              <h3>Johto</h3>
+              <p><strong>Topología:</strong> Bosques, montañas y costas.</p>
+              <p><strong>Clima:</strong> Templado con nieve en zonas altas.</p>
+              <p><strong>Pokémon representativo:</strong> Totodile, Lugia.</p>
+            </div>
+            <div class="col-md-6 text-center">
+              <img src="assets/images/regions/johto.jpg" alt="Mapa de Johto" class="img-fluid rounded shadow" loading="lazy">
+            </div>
+          </div>
+        </div>
+        <div id="region-hoenn" class="region-content" style="display:none">
+          <div class="row align-items-center">
+            <div class="col-md-6">
+              <h3>Hoenn</h3>
+              <p><strong>Topología:</strong> Islas, océanos y volcanes.</p>
+              <p><strong>Clima:</strong> Tropical, lluvias intensas.</p>
+              <p><strong>Pokémon representativo:</strong> Torchic, Kyogre, Groudon.</p>
+            </div>
+            <div class="col-md-6 text-center">
+              <img src="assets/images/regions/hoenn.jpg" alt="Mapa de Hoenn" class="img-fluid rounded shadow" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pokedex" class="page-section" aria-labelledby="pokedexTitle" style="display:none">
+      <h2 id="pokedexTitle" class="text-center mb-4">Pokédex Nacional</h2>
+      <div class="row justify-content-center mb-3">
+        <div class="col-md-6">
+          <div class="input-group">
+            <span class="input-group-text bg-primary text-white border-primary"><i class="bi bi-search"></i></span>
+            <input id="pokedexSearch" type="text" class="form-control" placeholder="Busca por nombre, tipo o región...">
+          </div>
+        </div>
+      </div>
+      <div class="row g-4" id="pokedexContainer" aria-live="polite"></div>
+      <nav aria-label="Paginación Pokédex" class="mt-4">
+        <ul class="pagination justify-content-center" id="pokedexPagination"></ul>
+      </nav>
+    </section>
+
+    <section id="nocanon" class="page-section" aria-labelledby="nocanonTitle" style="display:none">
+      <h2 id="nocanonTitle" class="text-center mb-3">No Canon</h2>
+      <p>Contenido del anime que no aparece en los juegos: episodios especiales, spin-offs y curiosidades.</p>
+    </section>
+
+    <section id="locaciones" class="page-section" aria-labelledby="locacionesTitle" style="display:none">
+      <h2 id="locacionesTitle" class="text-center mb-3">Locaciones Reales</h2>
+      <p>Listado de tiendas, cafés, estatuas y lugares inspirados en Pokémon.</p>
+      <ul>
+        <li>Pokémon Center (Tienda temática)</li>
+        <li>Café Pikachu (Cafetería temática)</li>
+        <li>Estatua de Charizard (Plaza central)</li>
+      </ul>
+      <div class="mt-3">
+        <h5>Ejemplo: Pokémon Center</h5>
+        <iframe src="https://www.google.com/maps?q=Central%20Park%20New%20York&output=embed" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </section>
+
+    <section id="tours" class="page-section" aria-labelledby="toursTitle" style="display:none">
+      <h2 id="toursTitle" class="text-center mb-3">Tours y Contacto</h2>
+      <p>Gestiona visitas guiadas a locaciones Pokémon. Para reservar, contáctanos:</p>
+      <p><strong>Correo:</strong> <a href="mailto:correo@tuuni.edu?subject=Reserva%20Tour">correo@tuuni.edu</a></p>
+      <p><strong>Teléfono:</strong> +1 555 123 456</p>
+    </section>
+  </main>
+
+  <button id="themeToggleBtnFloating" class="theme-toggle-floating" aria-label="Cambiar tema">
+    <img id="themeIcon" src="assets/images/pokemon/488.png" alt="Modo Claro">
+  </button>
+  <section id="redes-sociales" class="mt-5 text-center" aria-labelledby="redesTitle">
+    <h2 id="redesTitle" class="mb-3">Síguenos en redes sociales</h2>
+    <p class="text-muted mb-3">No te pierdas ninguna novedad del mundo Pokémon.</p>
+    <div class="d-flex justify-content-center flex-wrap gap-3">
+      <a class="btn btn-outline-primary" href="https://facebook.com/pokechu" target="_blank" rel="noopener" aria-label="Facebook"><i class="bi bi-facebook" aria-hidden="true"></i> Facebook</a>
+      <a class="btn btn-outline-primary" href="https://instagram.com/pokechu" target="_blank" rel="noopener" aria-label="Instagram"><i class="bi bi-instagram" aria-hidden="true"></i> Instagram</a>
+      <a class="btn btn-outline-primary" href="https://youtube.com/@pokechu" target="_blank" rel="noopener" aria-label="YouTube"><i class="bi bi-youtube" aria-hidden="true"></i> YouTube</a>
+      <a class="btn btn-outline-primary" href="https://x.com/pokechu" target="_blank" rel="noopener" aria-label="X (Twitter)"><i class="bi bi-twitter-x" aria-hidden="true"></i> X</a>
+      <a class="btn btn-outline-primary" href="https://discord.gg/pokechu" target="_blank" rel="noopener" aria-label="Discord"><i class="bi bi-discord" aria-hidden="true"></i> Discord</a>
+      <a class="btn btn-outline-primary" href="https://tiktok.com/@pokechu" target="_blank" rel="noopener" aria-label="TikTok"><i class="bi bi-tiktok" aria-hidden="true"></i> TikTok</a>
+    </div>
+  </section>
+  <footer class="mt-5 py-4 text-center">
+    <div class="container">
+      <p>© 2023 PokéChu — Proyecto académico</p>
+      <p><a href="privacy.html">Política de Privacidad</a></p>
+      <p class="mb-1"><strong>Enlaces de interés:</strong></p>
+      <p class="mb-0">
+        <a href="https://www.youtube.com/@pokemon" target="_blank" rel="noopener">Canal oficial de Pokémon (YouTube)</a> ·
+        <a href="https://www.google.com/maps?q=The+Pokémon+Company+Kyoto+Japan" target="_blank" rel="noopener">Dónde se encuentra la compañiéa de Pokémon (Mapa)</a>
+      </p>
+
+    </div>
+  </footer>
+
+  <div class="modal fade" id="ingresoModal" tabindex="-1" aria-hidden="true" aria-labelledby="modalUserName" role="dialog">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content text-center" style="background-color:var(--card-bg); color:var(--text-color);">
+        <div class="modal-header border-0 pb-0">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body p-4 pt-0">
+          <h3 id="modalUserName" class="modalName">¡Bienvenido!</h3>
+          <p id="modalMessage" class="mb-3">Tu registro ha sido exitoso.</p>
+          <video id="modalVideo" controls style="max-width:100%; max-height:360px; display:none;">
+            <source src="assets/videos/tu_video.mp4" type="video/mp4">
+            Tu navegador no soporta el elemento de vídeo.
+          </video>
+          <div id="modalYoutube" style="display:none;">
+            <div class="ratio ratio-16x9">
+              <iframe id="modalYoutubeIframe" src="" title="YouTube video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class="mt-3">
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Comenzar Aventura</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="pokedexDetailModal" tabindex="-1" aria-labelledby="pokedexDetailTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content" style="background-color:var(--card-bg); color:var(--text-color);">
+        <div class="modal-header border-0 pb-0">
+          <h5 id="pokedexDetailTitle" class="modal-title">Ficha Pokémon</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body p-4 pt-0" id="pokedexDetailBody">
+          <p class="text-center text-muted">Cargando...</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/data/pokedex.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
