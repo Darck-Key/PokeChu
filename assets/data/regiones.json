@@ -1,0 +1,67 @@
+{
+  "kanto": {
+    "key": "kanto",
+    "title": "Kanto",
+    "subtitle": "La región original del mundo Pokémon, hogar de Pueblo Paleta y Ciudad Plateada.",
+    "history": "Kanto es la región original del mundo Pokémon, hogar de ciudades icónicas como Pueblo Paleta y Ciudad Plateada. Aquí comenzaron muchas aventuras clásicas y se establecieron las primeras ligas Pokémon.",
+    "introYoutubeId": "YQXwS-rZvq4",
+    "introLocal": "assets/videos/kanto_intro.mp4",
+    "starters": [
+      { "number": "001", "name": "Bulbasaur", "img": "assets/images/pokemon/001.png", "type": "Planta/Veneno" },
+      { "number": "004", "name": "Charmander", "img": "assets/images/pokemon/004.png", "type": "Fuego" },
+      { "number": "007", "name": "Squirtle", "img": "assets/images/pokemon/007.png", "type": "Agua" }
+    ],
+    "emblem": {
+      "number": "025",
+      "name": "Pikachu",
+      "img": "assets/images/pokemon/025.png",
+      "desc": "Pikachu es el símbolo más reconocido de Kanto y compañero emblemático de muchas aventuras."
+    },
+    "mapImg": "assets/images/regions/kanto.jpg",
+    "mapIframe": ""
+  },
+
+  "johto": {
+    "key": "johto",
+    "title": "Johto",
+    "subtitle": "Región rica en tradiciones, ruinas antiguas y leyendas Pokémon.",
+    "history": "Johto es una región con fuerte tradición cultural, conocida por sus santuarios, ruinas y la conexión con Pokémon legendarios.",
+    "introYoutubeId": "",
+    "introLocal": "assets/videos/johto_intro.mp4",
+    "starters": [
+      { "number": "152", "name": "Chikorita", "img": "assets/images/pokemon/152.png", "type": "Planta" },
+      { "number": "155", "name": "Cyndaquil", "img": "assets/images/pokemon/155.png", "type": "Fuego" },
+      { "number": "158", "name": "Totodile", "img": "assets/images/pokemon/158.png", "type": "Agua" }
+    ],
+    "emblem": {
+      "number": "249",
+      "name": "Lugia",
+      "img": "assets/images/pokemon/249.png",
+      "desc": "Lugia, guardián de los mares, es uno de los emblemas legendarios asociados a Johto."
+    },
+    "mapImg": "assets/images/regions/johto.jpg",
+    "mapIframe": ""
+  },
+
+  "hoenn": {
+    "key": "hoenn",
+    "title": "Hoenn",
+    "subtitle": "Región de islas, océanos y volcanes, famosa por su diversidad natural.",
+    "history": "Hoenn es una región con gran variedad de hábitats: islas, selvas, volcanes y océanos. Sus leyendas giran en torno a los titanes de la tierra y el mar.",
+    "introYoutubeId": "",
+    "introLocal": "assets/videos/hoenn_intro.mp4",
+    "starters": [
+      { "number": "252", "name": "Treecko", "img": "assets/images/pokemon/252.png", "type": "Planta" },
+      { "number": "255", "name": "Torchic", "img": "assets/images/pokemon/255.png", "type": "Fuego" },
+      { "number": "258", "name": "Mudkip", "img": "assets/images/pokemon/258.png", "type": "Agua" }
+    ],
+    "emblem": {
+      "number": "382",
+      "name": "Kyogre",
+      "img": "assets/images/pokemon/382.png",
+      "desc": "Kyogre representa el poder del océano en Hoenn."
+    },
+    "mapImg": "assets/images/regions/hoenn.jpg",
+    "mapIframe": ""
+  }
+}

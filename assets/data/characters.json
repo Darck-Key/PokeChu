@@ -1,0 +1,604 @@
+[
+  {
+    "id": "ash-ketchum",
+    "name": "Ash Ketchum",
+    "realName": "Satoshi",
+    "age": "10+",
+    "role": "Entrenador",
+    "region": "kanto",
+    "affiliation": "Equipo de viaje",
+    "bio": "Joven entrenador decidido a convertirse en Maestro Pokémon; viaja por múltiples regiones con su Pikachu.",
+    "avatar": "assets/images/ash.jpg",
+    "pokemons": [
+      { "number": "025", "name": "Pikachu", "img": "assets/images/pokemon/025.png" }
+    ],
+    "firstSeen": "Episodio 1",
+    "highlight": "Protagonista principal",
+    "mapImg": "assets/images/regions/kanto.jpg"
+  },
+  {
+    "id": "misty",
+    "name": "Misty",
+    "realName": "Kasumi",
+    "age": "10+",
+    "role": "Líder",
+    "region": "kanto",
+    "affiliation": "Gym Cerulean",
+    "bio": "Especialista en Pokémon de tipo Agua y líder de gimnasio; acompaña a Ash en sus primeras aventuras.",
+    "avatar": "assets/images/misty.jpg",
+    "pokemons": [
+      { "number": "121", "name": "Starmie", "img": "assets/images/pokemon/121.png" }
+    ],
+    "firstSeen": "Episodio 1",
+    "highlight": "Líder de gimnasio",
+    "mapImg": "assets/images/regions/kanto.jpg"
+  },
+  {
+    "id": "brock",
+    "name": "Brock",
+    "realName": "Takeshi",
+    "age": "15+",
+    "role": "Entrenador / Cocinero",
+    "region": "kanto",
+    "affiliation": "Gym Pewter",
+    "bio": "Exlíder de gimnasio y experto en crianza Pokémon; viaja con Ash como apoyo y cocinero del grupo.",
+    "avatar": "assets/images/logo.png",
+    "pokemons": [
+      { "number": "074", "name": "Geodude", "img": "assets/images/pokemon/074.png" },
+      { "number": "095", "name": "Onix", "img": "assets/images/pokemon/095.png" }
+    ],
+    "firstSeen": "Episodio 3",
+    "highlight": "Exlíder de gimnasio",
+    "mapImg": "assets/images/regions/kanto.jpg"
+  },
+  {
+    "id": "gary-oak",
+    "name": "Gary Oak",
+    "realName": "Shigeru",
+    "age": "10+",
+    "role": "Rival",
+    "region": "kanto",
+    "affiliation": "Investigador",
+    "bio": "Rival de Ash y nieto del Profesor Oak; competitivo y ambicioso, con gran conocimiento Pokémon.",
+    "avatar": "assets/images/gary.jpg",
+    "pokemons": [
+      { "number": "006", "name": "Charizard", "img": "assets/images/pokemon/006.png" }
+    ],
+    "firstSeen": "Episodio 1",
+    "highlight": "Rival clásico",
+    "mapImg": "assets/images/regions/kanto.jpg"
+  },
+  {
+    "id": "prof-oak",
+    "name": "Profesor Oak",
+    "realName": "Samuel Oak",
+    "age": "60+",
+    "role": "Investigador",
+    "region": "kanto",
+    "affiliation": "Laboratorio Pokémon",
+    "bio": "Renombrado profesor Pokémon que guía a nuevos entrenadores y estudia la relación entre humanos y Pokémon.",
+    "avatar": "assets/images/logo.png",
+    "pokemons": [],
+    "firstSeen": "Episodio 1",
+    "highlight": "Mentor de entrenadores",
+    "mapImg": "assets/images/regions/kanto.jpg"
+  },
+  {
+    "id": "jessie",
+    "name": "Jessie",
+    "realName": "Jessie",
+    "age": "20+",
+    "role": "Antagonista",
+    "region": "varias",
+    "affiliation": "Team Rocket",
+    "bio": "Miembro del Team Rocket; persigue a Ash y su Pikachu junto a James y Meowth en intentos cómicos por robar Pokémon.",
+    "avatar": "assets/images/logo.png",
+    "pokemons": [
+      { "number": "054", "name": "Psyduck", "img": "assets/images/pokemon/054.png" }
+    ],
+    "firstSeen": "Episodio 2",
+    "highlight": "Team Rocket",
+    "mapImg": "assets/images/regions/kanto.jpg"
+  },
+  {
+    "id": "james",
+    "name": "James",
+    "realName": "James",
+    "age": "20+",
+    "role": "Antagonista",
+    "region": "varias",
+    "affiliation": "Team Rocket",
+    "bio": "Compañero de Jessie; participa en los planes del Team Rocket con un toque cómico y sentimental.",
+    "avatar": "assets/images/logo.png",
+    "pokemons": [
+      { "number": "052", "name": "Meowth", "img": "assets/images/pokemon/052.png" }
+    ],
+    "firstSeen": "Episodio 2",
+    "highlight": "Team Rocket",
+    "mapImg": "assets/images/regions/kanto.jpg"
+  },
+  {
+    "id": "meowth",
+    "name": "Meowth",
+    "realName": "Meowth",
+    "age": "—",
+    "role": "Antagonista / NPC",
+    "region": "varias",
+    "affiliation": "Team Rocket",
+    "bio": "Pokémon que habla y actúa como traductor y estratega del Team Rocket; aporta humor y planes fallidos.",
+    "avatar": "assets/images/logo.png",
+    "pokemons": [],
+    "firstSeen": "Episodio 2",
+    "highlight": "Pokémon parlante",
+    "mapImg": "assets/images/regions/kanto.jpg"
+  },
+  {
+    "id": "lt-surge",
+    "name": "Lt. Surge",
+    "realName": "Lt. Surge",
+    "age": "40+",
+    "role": "Líder",
+    "region": "kanto",
+    "affiliation": "Gym Vermilion",
+    "bio": "Líder de gimnasio especializado en Pokémon Eléctricos; exmilitar con estilo directo y potente.",
+    "avatar": "assets/images/logo.png",
+    "pokemons": [
+      { "number": "100", "name": "Voltorb", "img": "assets/images/pokemon/100.png" }
+    ],
+    "firstSeen": "Episodio 23",
+    "highlight": "Líder eléctrico",
+    "mapImg": "assets/images/regions/kanto.jpg"
+  },
+  {
+    "id": "erika",
+    "name": "Erika",
+    "realName": "Erika",
+    "age": "30+",
+    "role": "Líder",
+    "region": "kanto",
+    "affiliation": "Gym Celadon",
+    "bio": "Líder de gimnasio amante de las plantas y la jardinería; usa Pokémon de tipo Planta en combate.",
+    "avatar": "assets/images/logo.png",
+    "pokemons": [
+      { "number": "102", "name": "Exeggcute", "img": "assets/images/pokemon/102.png" }
+    ],
+    "firstSeen": "Episodio 35",
+    "highlight": "Líder de gimnasio",
+    "mapImg": "assets/images/regions/kanto.jpg"
+  },
+  {
+    "id": "sabrina",
+    "name": "Sabrina",
+    "realName": "Sabrina",
+    "age": "20+",
+    "role": "Líder",
+    "region": "kanto",
+    "affiliation": "Gym Saffron",
+    "bio": "Líder psíquica con fuertes habilidades mentales; su presencia impone respeto y misterio.",
+    "avatar": "assets/images/logo.png",
+    "pokemons": [
+      { "number": "064", "name": "Kadabra", "img": "assets/images/pokemon/064.png" }
+    ],
+    "firstSeen": "Episodio 41",
+    "highlight": "Líder psíquica",
+    "mapImg": "assets/images/regions/kanto.jpg"
+  },
+  {
+    "id": "giovanni",
+    "name": "Giovanni",
+    "realName": "Giovanni",
+    "age": "50+",
+    "role": "Antagonista",
+    "region": "varias",
+    "affiliation": "Team Rocket (líder)",
+    "bio": "Líder del Team Rocket; figura poderosa y enigmática con intereses criminales y ambición por el control.",
+    "avatar": "assets/images/logo.png",
+    "pokemons": [
+      { "number": "095", "name": "Onix", "img": "assets/images/pokemon/095.png" }
+    ],
+    "firstSeen": "Episodio 23",
+    "highlight": "Jefe del Team Rocket",
+    "mapImg": "assets/images/regions/kanto.jpg"
+  },
+  {
+    "id": "may",
+    "name": "May",
+    "realName": "Haruka",
+    "age": "10+",
+    "role": "Entrenadora",
+    "region": "hoenn",
+    "affiliation": "Concursos Pokémon",
+    "bio": "Entrenadora y coordinadora que viaja con Ash durante la saga Hoenn; participa en concursos y combates.",
+    "avatar": "assets/images/logo.png",
+    "pokemons": [
+      { "number": "255", "name": "Torchic", "img": "assets/images/pokemon/255.png" }
+    ],
+    "firstSeen": "Hoenn saga",
+    "highlight": "Coordinadora",
+    "mapImg": "assets/images/regions/hoenn.jpg"
+  },
+  {
+    "id": "max",
+    "name": "Max",
+    "realName": "Masato",
+    "age": "8+",
+    "role": "Acompañante",
+    "region": "hoenn",
+    "affiliation": "Equipo de viaje",
+    "bio": "Hermano menor de May; curioso y conocedor de datos Pokémon, aunque aún no es entrenador activo.",
+    "avatar": "assets/images/logo.png",
+    "pokemons": [],
+    "firstSeen": "Hoenn saga",
+    "highlight": "Acompañante joven",
+    "mapImg": "assets/images/regions/hoenn.jpg"
+  },
+  {
+    "id": "dawn",
+    "name": "Dawn",
+    "realName": "Hikari",
+    "age": "10+",
+    "role": "Coordinadora",
+    "region": "sinnoh",
+    "affiliation": "Concursos Pokémon",
+    "bio": "Coordinadora de Sinnoh que viaja con Ash; busca mejorar en concursos y fortalecer su vínculo con los Pokémon.",
+    "avatar": "assets/images/logo.png",
+    "pokemons": [
+      { "number": "390", "name": "Piplup", "img": "assets/images/pokemon/393.png" }
+    ],
+    "firstSeen": "Sinnoh saga",
+    "highlight": "Coordinadora destacada",
+    "mapImg": "assets/images/regions/sinnoh.jpg"
+  },
+  {
+    "id": "cynthia",
+    "name": "Cynthia",
+    "realName": "Cynthia",
+    "age": "30+",
+    "role": "Campeona",
+    "region": "sinnoh",
+    "affiliation": "Liga Sinnoh",
+    "bio": "Campeona de la Liga Sinnoh, conocida por su poderoso equipo y su interés por la arqueología Pokémon.",
+    "avatar": "assets/images/logo.png",
+    "pokemons": [
+      { "number": "248", "name": "Garchomp", "img": "assets/images/pokemon/445.png" }
+    ],
+    "firstSeen": "Sinnoh saga",
+    "highlight": "Campeona formidable",
+    "mapImg": "assets/images/regions/sinnoh.jpg"
+  },
+  {
+    "id": "steven",
+    "name": "Steven Stone",
+    "realName": "Steven",
+    "age": "30+",
+    "role": "Campeón",
+    "region": "hoenn",
+    "affiliation": "Liga Hoenn",
+    "bio": "Campeón de la Liga Hoenn y experto en minerales; calmado y estratégico en combate.",
+    "avatar": "assets/images/logo.png",
+    "pokemons": [
+      { "number": "302", "name": "Aggron", "img": "assets/images/pokemon/306.png" }
+    ],
+    "firstSeen": "Hoenn saga",
+    "highlight": "Campeón y geólogo",
+    "mapImg": "assets/images/regions/hoenn.jpg"
+  },
+  {
+    "id": "wallace",
+    "name": "Wallace",
+    "realName": "Wallace",
+    "age": "40+",
+    "role": "Campeón / Líder",
+    "region": "hoenn",
+    "affiliation": "Liga Hoenn",
+    "bio": "Líder y luego campeón en Hoenn, conocido por su estilo elegante y su afinidad por Pokémon de agua.",
+    "avatar": "assets/images/logo.png",
+    "pokemons": [
+      { "number": "382", "name": "Kyogre", "img": "assets/images/pokemon/382.png" }
+    ],
+    "firstSeen": "Hoenn saga",
+    "highlight": "Campeón acuático",
+    "mapImg": "assets/images/regions/hoenn.jpg"
+  },
+  {
+    "id": "lillie",
+    "name": "Lillie",
+    "realName": "Lillie",
+    "age": "12+",
+    "role": "Acompañante / Investigadora",
+    "region": "alola",
+    "affiliation": "Universidad Pokémon",
+    "bio": "Joven investigadora de Alola con una historia personal ligada a un Pokémon singular; crece como entrenadora.",
+    "avatar": "assets/images/logo.png",
+    "pokemons": [
+      { "number": "792", "name": "Cosmog", "img": "assets/images/pokemon/792.png" }
+    ],
+    "firstSeen": "Alola saga",
+    "highlight": "Historia emocional",
+    "mapImg": "assets/images/regions/alola.png"
+  },
+  {
+    "id": "gloria",
+    "name": "Gloria",
+    "realName": "Gloria",
+    "age": "10+",
+    "role": "Entrenadora",
+    "region": "galar",
+    "affiliation": "Viaje regional",
+    "bio": "Protagonista femenina de la región Galar en los juegos; viaja para descubrir su camino como entrenadora.",
+    "avatar": "assets/images/logo.png",
+    "pokemons": [
+      { "number": "810", "name": "Grookey", "img": "assets/images/pokemon/810.png" }
+    ],
+    "firstSeen": "Galar saga",
+    "highlight": "Protagonista de Galar",
+    "mapImg": "assets/images/regions/galar.jpg"
+  },
+  {
+    "id": "hop",
+    "name": "Hop",
+    "realName": "Hop",
+    "age": "10+",
+    "role": "Rival",
+    "region": "galar",
+    "affiliation": "Gym Challenger",
+    "bio": "Rival amistoso en Galar; ambicioso y con fuerte vínculo con su hermano y sus Pokémon.",
+    "avatar": "assets/images/logo.png",
+    "pokemons": [
+      { "number": "025", "name": "Pikachu", "img": "assets/images/pokemon/025.png" }
+    ],
+    "firstSeen": "Galar saga",
+    "highlight": "Rival carismático",
+    "mapImg": "assets/images/regions/galar.jpg"
+  },
+  {
+    "id": "n",
+    "name": "N",
+    "realName": "Natural Harmonia Gropius",
+    "age": "20+",
+    "role": "Antagonista / Filosófico",
+    "region": "unova",
+    "affiliation": "Team Plasma (ex)",
+    "bio": "Figura compleja que cuestiona la relación entre humanos y Pokémon; líder carismático con ideales radicales.",
+    "avatar": "assets/images/logo.png",
+    "pokemons": [
+      { "number": "493", "name": "Arceus", "img": "assets/images/pokemon/493.png" }
+    ],
+    "firstSeen": "Unova saga",
+    "highlight": "Personaje moralmente ambiguo",
+    "mapImg": "assets/images/regions/teselia.jpg"
+  },
+  {
+    "id": "colress",
+    "name": "Colress",
+    "realName": "Colress",
+    "age": "40+",
+    "role": "Científico",
+    "region": "unova",
+    "affiliation": "Investigador independiente",
+    "bio": "Científico obsesionado con el potencial de los Pokémon; estudia la fuerza y la relación entrenador-Pokémon.",
+    "avatar": "assets/images/logo.png",
+    "pokemons": [],
+    "firstSeen": "Unova saga",
+    "highlight": "Científico investigador",
+    "mapImg": "assets/images/regions/teselia.jpg"
+  },
+  {
+    "id": "lance",
+    "name": "Lance",
+    "realName": "Lance",
+    "age": "40+",
+    "role": "Campeón",
+    "region": "kanto",
+    "affiliation": "Elite Four / Campeón",
+    "bio": "Miembro de la Elite Four y campeón en varias regiones; especialista en Pokémon Dragón y líder respetado.",
+    "avatar": "assets/images/logo.png",
+    "pokemons": [
+      { "number": "149", "name": "Dragonite", "img": "assets/images/pokemon/149.png" }
+    ],
+    "firstSeen": "Generación I",
+    "highlight": "Maestro dragón",
+    "mapImg": "assets/images/regions/kanto.jpg"
+  },
+  {
+    "id": "maylene",
+    "name": "Maylene",
+    "realName": "Maylene",
+    "age": "20+",
+    "role": "Líder",
+    "region": "sinnoh",
+    "affiliation": "Gym Veilstone",
+    "bio": "Líder de gimnasio especializada en Pokémon Lucha; enérgica y determinada en combate.",
+    "avatar": "assets/images/logo.png",
+    "pokemons": [
+      { "number": "237", "name": "Hariyama", "img": "assets/images/pokemon/297.png" }
+    ],
+    "firstSeen": "Sinnoh saga",
+    "highlight": "Líder de gimnasio de lucha",
+    "mapImg": "assets/images/regions/sinnoh.jpg"
+  },
+  {
+    "id": "nurse-joy",
+    "name": "Enfermera Joy",
+    "realName": "Joy",
+    "age": "—",
+    "role": "NPC / Sanidad",
+    "region": "varias",
+    "affiliation": "Centro Pokémon",
+    "bio": "Personal de los Centros Pokémon que cuida y recupera a los Pokémon; figura amable y recurrente en todas las regiones.",
+    "avatar": "assets/images/logo.png",
+    "pokemons": [],
+    "firstSeen": "Episodio 1",
+    "highlight": "Cuidadora de Pokémon",
+    "mapImg": "assets/images/regions/kanto.jpg"
+  },
+  {
+    "id": "officer-jenny",
+    "name": "Oficial Jenny",
+    "realName": "Jenny",
+    "age": "—",
+    "role": "NPC / Seguridad",
+    "region": "varias",
+    "affiliation": "Policía Pokémon",
+    "bio": "Miembro de la fuerza policial que mantiene el orden y ayuda a entrenadores; aparece en múltiples ciudades y regiones.",
+    "avatar": "assets/images/logo.png",
+    "pokemons": [],
+    "firstSeen": "Episodio 1",
+    "highlight": "Autoridad local",
+    "mapImg": "assets/images/regions/kanto.jpg"
+  },
+  {
+    "id": "red",
+    "name": "Red",
+    "realName": "Red",
+    "age": "20+",
+    "role": "Leyenda / Entrenador",
+    "region": "kanto",
+    "affiliation": "Campeón legendario",
+    "bio": "Entrenador legendario conocido por su equipo equilibrado y su estatus como uno de los más fuertes de Kanto.",
+    "avatar": "assets/images/logo.png",
+    "pokemons": [
+      { "number": "006", "name": "Charizard", "img": "assets/images/pokemon/006.png" },
+      { "number": "149", "name": "Dragonite", "img": "assets/images/pokemon/149.png" }
+    ],
+    "firstSeen": "Juegos clásicos",
+    "highlight": "Entrenador icónico",
+    "mapImg": "assets/images/regions/kanto.jpg"
+  },
+  {
+    "id": "blue",
+    "name": "Blue",
+    "realName": "Blue",
+    "age": "20+",
+    "role": "Rival / Campeón",
+    "region": "kanto",
+    "affiliation": "Campeón",
+    "bio": "Rival de los juegos originales; estratega fuerte y figura clave en la historia competitiva de Kanto.",
+    "avatar": "assets/images/logo.png",
+    "pokemons": [
+      { "number": "006", "name": "Charizard", "img": "assets/images/pokemon/006.png" }
+    ],
+    "firstSeen": "Juegos clásicos",
+    "highlight": "Rival de leyenda",
+    "mapImg": "assets/images/regions/kanto.jpg"
+  },
+  {
+    "id": "rosa",
+    "name": "Rosa",
+    "realName": "Rosa",
+    "age": "10+",
+    "role": "Entrenadora",
+    "region": "unova",
+    "affiliation": "Viaje regional",
+    "bio": "Protagonista femenina de una generación; viaja para convertirse en entrenadora y descubre la región Unova.",
+    "avatar": "assets/images/logo.png",
+    "pokemons": [
+      { "number": "498", "name": "Tepig", "img": "assets/images/pokemon/498.png" }
+    ],
+    "firstSeen": "Unova saga",
+    "highlight": "Protagonista de Unova",
+    "mapImg": "assets/images/regions/teselia.jpg"
+  },
+  {
+    "id": "serena",
+    "name": "Serena",
+    "realName": "Serena",
+    "age": "10+",
+    "role": "Entrenadora / Coordinadora",
+    "region": "kalos",
+    "affiliation": "Concursos",
+    "bio": "Compañera de Ash en la saga XY; se centra en concursos y en su crecimiento personal como entrenadora.",
+    "avatar": "assets/images/logo.png",
+    "pokemons": [
+      { "number": "654", "name": "Fennekin", "img": "assets/images/pokemon/654.png" }
+    ],
+    "firstSeen": "XY saga",
+    "highlight": "Coordinadora y rival amistosa",
+    "mapImg": "assets/images/regions/kalos.jpg"
+  },
+  {
+    "id": "maylene",
+    "name": "Maylene",
+    "realName": "Maylene",
+    "age": "20+",
+    "role": "Líder",
+    "region": "sinnoh",
+    "affiliation": "Gym Veilstone",
+    "bio": "Líder de gimnasio de Sinnoh especializada en Pokémon de tipo Lucha; enérgica y competitiva.",
+    "avatar": "assets/images/logo.png",
+    "pokemons": [
+      { "number": "297", "name": "Hariyama", "img": "assets/images/pokemon/297.png" }
+    ],
+    "firstSeen": "Sinnoh saga",
+    "highlight": "Líder de gimnasio",
+    "mapImg": "assets/images/regions/sinnoh.jpg"
+  },
+  {
+    "id": "guzma",
+    "name": "Guzma",
+    "realName": "Guzma",
+    "age": "25+",
+    "role": "Antagonista",
+    "region": "alola",
+    "affiliation": "Team Skull",
+    "bio": "Líder del Team Skull; actitud rebelde y estilo agresivo, con un trasfondo que explica su comportamiento.",
+    "avatar": "assets/images/logo.png",
+    "pokemons": [
+      { "number": "727", "name": "Golisopod", "img": "assets/images/pokemon/727.png" }
+    ],
+    "firstSeen": "Alola saga",
+    "highlight": "Líder de banda",
+    "mapImg": "assets/images/regions/alola.png"
+  },
+  {
+    "id": "hilda",
+    "name": "Hilda",
+    "realName": "Hilda",
+    "age": "10+",
+    "role": "Entrenadora",
+    "region": "unova",
+    "affiliation": "Viaje regional",
+    "bio": "Protagonista femenina de Unova en los juegos; viaja para convertirse en la mejor entrenadora de su región.",
+    "avatar": "assets/images/logo.png",
+    "pokemons": [
+      { "number": "498", "name": "Snivy", "img": "assets/images/pokemon/495.png" }
+    ],
+    "firstSeen": "Unova saga",
+    "highlight": "Protagonista de Unova",
+    "mapImg": "assets/images/regions/teselia.jpg"
+  },
+  {
+    "id": "nessa",
+    "name": "Nessa",
+    "realName": "Nessa",
+    "age": "20+",
+    "role": "Líder",
+    "region": "galar",
+    "affiliation": "Gym Hulbury",
+    "bio": "Líder de gimnasio de Galar especializada en Pokémon de tipo Agua; carismática y profesional.",
+    "avatar": "assets/images/logo.png",
+    "pokemons": [
+      { "number": "121", "name": "Starmie", "img": "assets/images/pokemon/121.png" }
+    ],
+    "firstSeen": "Galar saga",
+    "highlight": "Líder acuática",
+    "mapImg": "assets/images/regions/galar.jpg"
+  },
+  {
+    "id": "bea",
+    "name": "Bea",
+    "realName": "Bea",
+    "age": "20+",
+    "role": "Líder",
+    "region": "galar",
+    "affiliation": "Gym Stow-on-Side",
+    "bio": "Líder de gimnasio experta en Pokémon de tipo Lucha; disciplinada y exigente en entrenamiento.",
+    "avatar": "assets/images/logo.png",
+    "pokemons": [
+      { "number": "106", "name": "Hitmonlee", "img": "assets/images/pokemon/106.png" }
+    ],
+    "firstSeen": "Galar saga",
+    "highlight": "Líder de lucha",
+    "mapImg": "assets/images/regions/galar.jpg"
+  }
+]

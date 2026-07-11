@@ -1,0 +1,162 @@
+﻿<!doctype html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Locaciones — PokéChu</title>
+  <meta name="description" content="Locaciones Pokémon: tiendas, cafeterías y lugares temáticos.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="assets/images/favicon.png">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark" aria-label="Navegación principal">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="assets/images/logo.png" alt="Logo PokéChu" height="32" class="me-2">
+        <span class="logo-text">PokéChu</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Mostrar menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="regionsMenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">Regiones</a>
+            <ul class="dropdown-menu" aria-labelledby="regionsMenu">
+              <li><a class="dropdown-item" href="kanto.html">Kanto</a></li>
+              <li><a class="dropdown-item" href="johto.html">Johto</a></li>
+              <li><a class="dropdown-item" href="hoenn.html">Hoenn</a></li>
+              <li><a class="dropdown-item" href="sinnoh.html">Sinnoh</a></li>
+              <li><a class="dropdown-item" href="teselia.html">Teselia</a></li>
+              <li><a class="dropdown-item" href="kalos.html">Kalos</a></li>
+              <li><a class="dropdown-item" href="alola.html">Alola</a></li>
+              <li><a class="dropdown-item" href="galar.html">Galar</a></li>
+              <li><a class="dropdown-item" href="paldea.html">Paldea</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="pokedex.html">PokéDex</a></li>
+          <li class="nav-item"><a class="nav-link" href="characters.html">Personajes</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="locacion.html">Locaciones</a></li>
+          <li class="nav-item"><a class="nav-link" href="tours.html">Tours</a></li>
+          <li class="nav-item"><a class="nav-link" href="noticias.html">Noticias</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container my-5">
+    <div>
+      <img src="assets/images/logo.png" alt="Logo PokéChu" height="48" class="page-header-logo d-block mx-auto mb-2">
+      <h1 class="mb-1">Locaciones</h1>
+      <p class="lead mb-0">Explora locaciones icónicas del mundo Pokémon.</p>
+    </div>
+
+    <div class="mb-3">
+      <label for="locationSearch" class="visually-hidden">Buscar locación</label>
+      <div class="input-group">
+        <span class="input-group-text bg-primary text-white border-primary"><i class="bi bi-search" aria-hidden="true"></i></span>
+        <input id="locationSearch" type="text" class="form-control" placeholder="Buscar por nombre o ciudad...">
+      </div>
+    </div>
+
+    <section aria-labelledby="locationsListTitle" class="mb-4">
+      <button id="backToList" class="btn btn-sm btn-outline-secondary mb-3" style="display:none;">Volver a la lista</button>
+      <h2 id="locationsListTitle" class="visually-hidden">Listado de locaciones</h2>
+      <div id="locationsList" class="row g-4" aria-live="polite" aria-busy="false"></div>
+    </section>
+
+    <section id="location-detail" class="region-page" aria-labelledby="locationName" role="region" data-location="" style="display:none;">
+      <div class="region-hero p-3 rounded shadow-sm mb-4 d-flex flex-column flex-lg-row gap-3 align-items-start">
+        <div class="hero-text flex-fill">
+          <h2 id="locationName" class="mb-1">Nombre locación</h2>
+          <p id="locationCity" class="text-muted mb-1">Ciudad</p>
+          <p id="locationType" class="text-muted mb-1">Tipo</p>
+          <p id="locationDescription" class="mb-0">Descripción de la locación.</p>
+        </div>
+      </div>
+      <div class="map-card mb-3 p-3 rounded shadow-sm">
+        <h3 class="h6">Ubicación</h3>
+        <img id="locationMapImg" src="assets/images/regions/placeholder.png" alt="Mapa de la locación" class="img-fluid rounded mb-2" loading="lazy">
+      </div>
+    </section>
+
+    <section id="pokemon-videos" class="mt-5" aria-labelledby="videosTitle">
+      <h2 id="videosTitle" class="mb-3">Videos de Pokémon</h2>
+      <p class="text-muted mb-4">Disfruta de algunos tráileres oficiales del mundo Pokémon.</p>
+      <div class="row g-4">
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="video-card rounded shadow-sm overflow-hidden">
+            <div class="ratio ratio-16x9">
+              <iframe src="https://www.youtube-nocookie.com/embed/r12w4iRBLp4" title="Pokémon the Movie: I Choose You! — Tráiler oficial" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="p-2"><small class="text-muted">Pokémon the Movie: I Choose You!</small></div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="video-card rounded shadow-sm overflow-hidden">
+            <div class="ratio ratio-16x9">
+              <iframe src="https://www.youtube-nocookie.com/embed/bxTxlKvQFU8" title="Pokémon the Movie: Hoopa and the Clash of Ages — Tráiler oficial" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="p-2"><small class="text-muted">Hoopa and the Clash of Ages</small></div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="video-card rounded shadow-sm overflow-hidden">
+            <div class="ratio ratio-16x9">
+              <iframe src="https://www.youtube-nocookie.com/embed/c2edLO4GxGs" title="Pokémon: Mewtwo Strikes Back—Evolution — Tráiler oficial" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="p-2"><small class="text-muted">Mewtwo Strikes Back—Evolution</small></div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="video-card rounded shadow-sm overflow-hidden">
+            <div class="ratio ratio-16x9">
+              <iframe src="https://www.youtube-nocookie.com/embed/XfDP4V6_gmA" title="Pokémon the Movie: Secrets of the Jungle — First Look" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="p-2"><small class="text-muted">Secrets of the Jungle</small></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <button id="themeToggleBtnFloating" class="theme-toggle-floating" aria-label="Cambiar tema">
+    <img id="themeIcon" src="assets/images/pokemon/488.png" alt="Modo Claro">
+  </button>
+  <section id="redes-sociales" class="mt-5 text-center" aria-labelledby="redesTitle">
+    <h2 id="redesTitle" class="mb-3">Síguenos en redes sociales</h2>
+    <p class="text-muted mb-3">No te pierdas ninguna novedad del mundo Pokémon.</p>
+    <div class="d-flex justify-content-center flex-wrap gap-3">
+      <a class="btn btn-outline-primary" href="https://facebook.com/pokechu" target="_blank" rel="noopener" aria-label="Facebook"><i class="bi bi-facebook" aria-hidden="true"></i> Facebook</a>
+      <a class="btn btn-outline-primary" href="https://instagram.com/pokechu" target="_blank" rel="noopener" aria-label="Instagram"><i class="bi bi-instagram" aria-hidden="true"></i> Instagram</a>
+      <a class="btn btn-outline-primary" href="https://youtube.com/@pokechu" target="_blank" rel="noopener" aria-label="YouTube"><i class="bi bi-youtube" aria-hidden="true"></i> YouTube</a>
+      <a class="btn btn-outline-primary" href="https://x.com/pokechu" target="_blank" rel="noopener" aria-label="X (Twitter)"><i class="bi bi-twitter-x" aria-hidden="true"></i> X</a>
+      <a class="btn btn-outline-primary" href="https://discord.gg/pokechu" target="_blank" rel="noopener" aria-label="Discord"><i class="bi bi-discord" aria-hidden="true"></i> Discord</a>
+      <a class="btn btn-outline-primary" href="https://tiktok.com/@pokechu" target="_blank" rel="noopener" aria-label="TikTok"><i class="bi bi-tiktok" aria-hidden="true"></i> TikTok</a>
+    </div>
+  </section>
+  <footer class="mt-5 py-4 text-center">
+    <div class="container">
+      <p>© 2023 PokéChu — Proyecto académico</p>
+      <p><a href="privacy.html">Política de Privacidad</a></p>
+      <p class="mb-1"><strong>Enlaces de interés:</strong></p>
+      <p class="mb-0">
+        <a href="https://www.youtube.com/@pokemon" target="_blank" rel="noopener">Canal oficial de Pokémon (YouTube)</a> ·
+        <a href="https://www.google.com/maps?q=The+Pokémon+Company+Kyoto+Japan" target="_blank" rel="noopener">Dónde se encuentra la compañiéa de Pokémon (Mapa)</a>
+      </p>
+
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/locacion.js"></script>
+</body>
+</html>
